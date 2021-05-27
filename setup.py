@@ -12,8 +12,10 @@ setup(
     name="musixmatch-py",
     author="sarzz2",
     url="https://github.com/takos22/codingame",
-    project_urls={},
-    version="0.1",
+    project_urls={
+        "Documentation": "https://musixmatch-py.readthedocs.io/en/latest/",
+    },
+    version="0.1.1",
     packages=["musixmatch-py"],
     license="MIT",
     description="Pythonic wrapper for the undocumented musixmatch API.",
@@ -22,7 +24,7 @@ setup(
     install_requires=requirements,
     python_requires=">=3.6",
     classifiers=[
-        "License :: OSI Approved :: MIT License",
+        'License :: OSI Approved :: MIT License',
         "Programming Language :: Python",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",

@@ -1,5 +1,5 @@
 musixmatch module for python
-===========================
+=============================
 .. image:: https://img.shields.io/pypi/v/musixmatch-py?color=blue
    :target: https://pypi.python.org/pypi/musixmatch-py
    :alt: PyPI version info
@@ -14,7 +14,7 @@ musixmatch module for python
    :alt: Documentation Status
 .. image:: https://img.shields.io/github/license/sarzz2/musixmatch-py?color=brightgreen
    :alt: License: MIT
-.. image:: https://img.shields.io/discord/754028526079836251.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2
+.. image:: https://img.shields.io/discord/847486943440797766.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2
    :target: https://discord.gg/3kmWTqx3
    :alt: Discord support server
 
@@ -54,4 +54,5 @@ Links
 ------
 
 - `PyPi <https://pypi.org/project/musixmatch-py/>`_
+- `Documentation <https://musixmatch-py.readthedocs.io/en/latest/API.html#album>`_
 - `Discord support server <https://discord.gg/8HgtN6E>`_
