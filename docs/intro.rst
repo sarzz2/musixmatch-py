@@ -24,3 +24,14 @@ You can get the library directly from PyPI:
 .. code:: sh
 
     pip install musixmatch-py
+
+
+Getting Started
+----------------
+.. code:: python3
+
+    from musixmatch.main import Musixmatch
+    auth = Musixmatch("Your_musixmatch-API-key")
+    auth.search_track("Hello")
+
+For list of all functions see documentation

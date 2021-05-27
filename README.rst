@@ -7,7 +7,7 @@ musixmatch module for python
    :target: https://pypi.python.org/pypi/musixmatch-py
    :alt: PyPI supported Python versions
 .. image:: https://img.shields.io/pypi/dm/musixmatch-py
-   :target: https://pypi.python.org/pypi/musixmatch-py
+   :target: https://pypi.org/project/musixmatch-py/
    :alt: PyPI downloads
 .. image:: https://readthedocs.org/projects/musixmatch-py/badge/?version=latest
    :target: https://musixmatch-py.readthedocs.io/en/latest/
@@ -41,6 +41,8 @@ Getting Started
     from musixmatch.main import Musixmatch
     auth = Musixmatch("Your_musixmatch-API-key")
     auth.search_track("Hello")
+
+For list of all functions see documentation
 
 
 Contribute
