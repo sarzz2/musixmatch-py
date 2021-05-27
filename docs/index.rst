@@ -1,5 +1,5 @@
 .. musixmatch-py documentation master file, created by
-   sphinx-quickstart on Wed May 26 22:48:23 2021.
+   sphinx-quickstart on Thu May 27 10:34:52 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -7,8 +7,11 @@ Welcome to musixmatch-py's documentation!
 =========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
+
+   intro
+   API
 
 
 
