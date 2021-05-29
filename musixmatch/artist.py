@@ -26,6 +26,13 @@ class Artist:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()
 
     def artist_search(self, name, page=1, page_size=10):
@@ -46,6 +53,13 @@ class Artist:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()
 
     def artist_album(
@@ -74,6 +88,13 @@ class Artist:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()
 
     def artist_related(self, artist_id, page=1, page_size=10):
@@ -96,4 +117,11 @@ class Artist:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()

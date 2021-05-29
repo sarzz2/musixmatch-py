@@ -63,6 +63,13 @@ class Track:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()
 
     def track_by_id(self, id):
@@ -79,6 +86,13 @@ class Track:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()
 
     def lyrics_by_id(self, id):
@@ -95,6 +109,13 @@ class Track:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()
 
     def lyrics_mood_by_id(self, id):
@@ -109,6 +130,15 @@ class Track:
         x = requests.get(
             f"{Endpoints.base_url}track.lyrics.mood.get?apikey={self.api_key}&commontrack_id={id}"
         )
+        if x.json()["message"]["header"]["status_code"] == 401:
+            return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()
 
     # def track_snippet_by_id(self, id):
@@ -142,10 +172,15 @@ class Track:
         x = requests.get(
             f"{Endpoints.base_url}track.subtitle.get?apikey={self.api_key}&commontrack_id={id}&subtitle_format={subtitle_format}&f_subtitle_length={f_subtitle_length}&f_subtitle_length_max_deviation{f_subtitle_length_max_deviation}"
         )
-        if x.json()["message"]["header"]["status_code"] == 403:
-            return "You need a commercial plan to make this request"
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation.You need a commercial plan for this request"
         return x.json()
 
     def rich_sync_by_id(
@@ -171,10 +206,15 @@ class Track:
         x = requests.get(
             f"{Endpoints.base_url}track.richsync.get?apikey={self.api_key}&track_id={id}&f_richsync_length={f_richsync_length}&f_richsync_length_max_deviation={f_richsync_length_max_deviation}"
         )
-        if x.json()["message"]["header"]["status_code"] == 403:
-            return "You need a commercial plan to make this request"
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation. You need a commercial plan for this request."
         return x.json()
 
     def translate_lyrics(self, id, language, min_completed=1):
@@ -192,8 +232,13 @@ class Track:
         x = requests.get(
             f"{Endpoints.base_url}track.lyrics.translation.get?apikey={self.api_key}&commontrack_id={id}&selected_language={language}&min_completed={min_completed}"
         )
-        if x.json()["message"]["header"]["status_code"] == 403:
-            return "You need a commercial plan to make this request"
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation. You need a commercial plan for this request."
         return x.json()

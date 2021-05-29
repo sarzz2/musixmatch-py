@@ -26,6 +26,13 @@ class Matcher:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         # print(x.json()["message"]["body"]["lyrics"]["lyrics_body"])
         return x.json()
 
@@ -45,4 +52,13 @@ class Matcher:
         x = requests.get(
             f"{Endpoints.base_url}matcher.track.get?apikey={self.api_key}&q_track={track}&q_artist={artist}&q_album={album}"
         )
+        if x.json()["message"]["header"]["status_code"] == 401:
+            return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()

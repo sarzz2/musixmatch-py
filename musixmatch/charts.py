@@ -30,6 +30,13 @@ class Charts:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()
 
     def get_top_song(
@@ -59,4 +66,11 @@ class Charts:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         return x.json()

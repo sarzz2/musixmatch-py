@@ -26,6 +26,13 @@ class Album:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         if x.json()["message"]["header"]["status_code"] == 404:
             return f"No album with given ID:{album_id} found"
         return x.json()
@@ -52,6 +59,13 @@ class Album:
         )
         if x.json()["message"]["header"]["status_code"] == 401:
             return "Invalid API key"
+        if x.json()["message"]["header"]["status_code"] == 402:
+            return (
+                "The usage limit has been reached, either you exceeded per day requests limits or your balance is "
+                "insufficient. "
+            )
+        if x.json()["message"]["header"]["status_code"] == 403:
+            return "You are not authorized to perform this operation."
         if x.json()["message"]["header"]["status_code"] == 404:
             return f"No album with given ID:{album_id} found"
         return x.json()
