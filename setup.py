@@ -11,7 +11,7 @@ setup(
     project_urls={
         "Documentation": "https://musixmatch-py.readthedocs.io/en/latest/",
     },
-    version="0.1.5",
+    version="0.2",
     packages=["musixmatch"],
     license="MIT",
     description="Pythonic wrapper for the undocumented musixmatch API.",

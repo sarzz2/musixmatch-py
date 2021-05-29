@@ -9,4 +9,3 @@ Support
 -------
 In case you'd like to help out but don't want to deal with GitHub, there's a great opportunity:
 help your fellow developers on `Discord <https://discord.gg/dNvFd5VBrh>`_!
-
